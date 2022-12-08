@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Noto+Sans+KR:wght@400;700&family=Roboto+Mono&display=swap');
+
+/*reset*/
+* {margin: 0; padding: 0; box-sizing: border-box;}
+.clearfix::before, .clearfix::after {display: block; content: ''; clear: both;}
+ul, li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+body {font-family: 'Noto Sans KR', sans-serif;}
+img {vertical-align: top;}
+
+/*layout*/
+#header {display: flex; width: 100%; height: 100px; background: #262626; }
+.container {width: 1640px; margin: 0 auto;}
+.container2 {width: 100%; margin: 0 auto;}
+.hide {display: none;}
+.show {display: block;}
+
+/*header*/
+#header h1{flex: none; width: 225px; height: 40px; margin: 30px 178px 0 0;}
+#header h1 img{width: 100%;}
+#header .container {display: flex;}
+
+/*nav*/
+.nav {margin-left: auto; width: 1400px;}
+.nav ul li{float: left; color: #fff; justify-content: center; width: 150px; font-size: 20px; margin-left: 80px; margin-top: 35px; }
+.nav ul li:last-child {margin-left: 0; }
+.nav ul li a:hover {color: #ed6d00;}
+
+/*banner*/
+.banner {background: url('../images/z.jpg') no-repeat center; height:100%;}
+.slideList {position: relative; width: 100%; height: 910px; overflow: hidden;}
+.slideList .slideImg{position: relative;  }
+.slideList .slideImg h2{position: absolute; font-size: 50px; font-weight: 700; margin: 330px 0 0 140px; color: #fff;}
+.slideList .slideImg p{position: absolute; margin-left: 140px; margin: 420px 0 0 140px; color: #fff;} 
+.slideList .slideImg img{width: 100%;}
+
+/*scroll down*/
+.slidebtn {position: absolute; left: 50%; bottom: 50px;}
+#thanks {background-color: #fff;}
+#thanks::after {content: none;}
+#thanks div { position: absolute; top: 50%; left: 50%; z-index: 2; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); text-align: center; }
+.demo a { position: absolute; left: 50%; z-index: 2; display: inline-block; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); color: #fff; font : normal 400 20px/1 'Josefin Sans', sans-serif; letter-spacing: .1em; text-decoration: none; transition: opacity .3s;}
+.demo a:hover {opacity: .5;}
+.slidebtn a {padding-top: 60px;} /*글자에 패팅을 줘서 그 패딩공간안에 쟤를 넣음*/
+.slidebtn a span {position: absolute; top: 0; left: 50%; width: 30px; height: 50px; margin-left: -15px; border: 2px solid #fff; border-radius: 50px; box-sizing: border-box;
+}/*겉에 감싸는 원*/
+.slidebtn a span::before { position: absolute; top: 10px; left: 50%; content: ''; width: 6px; height: 6px; margin-left: -3px;background-color: #fff; border-radius: 100%; -webkit-animation: sdb10 2s infinite; animation: sdb10 2s infinite; box-sizing: border-box;
+} /*이거 내려가는 구슬*/
+@-webkit-keyframes sdb10 {
+    0% { -webkit-transform: translate(0, 0); opacity: 0; }
+    40% { opacity: 1;}
+    80% {-webkit-transform: translate(0, 20px); opacity: 0;}
+    100% { opacity: 0; }
+}
+@keyframes sdb10 {
+    0% { transform: translate(0, 0); opacity: 0;}
+    40% {opacity: 1;}
+    80% {transform: translate(0, 20px);opacity: 0;}
+    100% {opacity: 0;}
+}
+
+/*vision*/
+.vision {display: flex; justify-content: center;}
+.vision .vision-left { width: 870px; height: 910px;}
+.vision .vision-left img {width: 100%; height: auto; margin-top: 100px;}
+.vision .vision-right {width: 50%; height: 910px; padding: 20px;}
+.vision .vision-right .vision-titile {margin-top: 215px;}
+.vision .vision-right .vision-titile h2{ font-size: 50px; font-weight: 900; color: #111111;}
+.vision .vision-right .vision-titile p{font-size: 25px; width: 750px; color: #505050;}
+.vision .vision-right .vision-contents{margin-top: 62px;}
+.vision .vision-right .vision-contents .click-box {margin-top: 20px; display: flex;}
+.vision .vision-right .vision-contents .click-box .click-box1 { background-color: #161616; width: 32px; height: 32px; border-radius: 50%; margin-right: 10px; color: #fff; text-align: center; line-height: 31px;font-size: 15px;}
+.vision .vision-right .vision-contents .click-box .click-box2 {background-color: #E7E7E7; width: 32px; height: 32px; border-radius: 50%; margin-right: 10px; color: #c3c3c3; text-align: center; line-height: 31px;font-size: 15px;}
+.vision .vision-right .vision-contents .click-box .click-box3 {background-color: #E7E7E7; width: 32px; height: 32px; border-radius: 50%; color: #c3c3c3; text-align: center; line-height: 31px;font-size: 15px;}
+.vision .vision-right .vision-contents h4{font-size: 25px; font-weight: 900; color:#161616;}
+
+.vision .vision-right .vision-contents .move-boxwrap {display: flex; width: 655px; position: relative;}
+.vision .vision-right .vision-contents .move-boxwrap .move-position {position: absolute; left: 0; top:40px;}
+.vision .vision-right .vision-contents .move-box{margin-top: 38px; width: 655px;}
+.vision .vision-right .vision-contents .move-box:nth-child(2) {display: none;}
+.vision .vision-right .vision-contents .move-box:nth-child(3) {display: none;}
+.vision .vision-right .vision-contents .move-box .move-box-textbox {display: flex;}
+.vision .vision-right .vision-contents .move-box h3{font-size: 32px; font-weight: 700; color: #ed6d00;}
+.vision .vision-right .vision-contents .move-box p{font-size: 25px; color: #505050; width: 400px; margin-top: 12px;}
+.vision .vision-right .vision-contents .move-box img{margin-left: 155px; width: 100px; height: 100px;}
+
+/*global*/
+.global {position: relative;}
+.global .circle1{width: 1730px; height: 1730px; background-color: #ed6d00; border-radius: 50%; opacity: 0.1; position: absolute; left: -865px; top: 205px; z-index: 0; animation: motion1 2s linear 0s infinite alternate;}
+@keyframes motion1 {
+    0% {margin-top: 0px;}
+    100% {margin-top: 40px;}
+}
+.global .circle2{width: 614px; height: 614px; background-color: #ed6d00; opacity: 0.1; border-radius: 50%; position: absolute; right: 0; top: 72px; z-index: 0; animation: motion2 1s linear 0s infinite alternate;}
+@keyframes motion2 {
+    0% {margin-top: 0px;}
+    100% {margin-top: 20px;}
+}
+
+.global h2{color: #111111; font-size: 50px; text-align: center; position: relative; font-weight: 900;}
+.global h2 .glo-underline{height: 2px; width: 220px; background-color: #ed6d00; position: absolute; left: 630px; top: 72px;}
+
+.global .global-textbox {width: 100%; z-index: 100; }
+.global .global-textbox .global-textbox1{float: left;}
+.global .global-textbox .global-textbox2{float: right; margin-right: 140px;}
+.global .global-textbox .global-textbox3{float: left;}
+
+.global .global-text1{width: 1200px; margin-top: 62px;}
+.global .global-text1 h5 {font-size: 80px; color: #505050; font-weight: normal;}
+.global .global-text1 p{font-size: 30px;}
+.global .global-text1 h5 span{font-size: 80px; color: #262626; font-weight: 900;}
+
+.global .global-text2{width: 1350px; margin-top: 62px; text-align: right;}
+.global .global-text2 h5 {font-size: 80px; color: #505050; font-weight: normal;}
+.global .global-text2 p{font-size: 30px;}
+.global .global-text2 h5 span{font-size: 80px; color: #262626; font-weight: 900;}
+
+.global .global-text3{width: 1250px; margin-top: 62px;}
+.global .global-text3 h5 {font-size: 80px; color: #505050; font-weight: normal;}
+.global .global-text3 p{font-size: 30px;}
+.global .global-text3 h5 span{font-size: 80px; color: #262626; font-weight: 900;}
+
+/*brands*/
+.brands {margin-top: 183px;}
+.brands .container2 {overflow: hidden;}
+.brands h2{color: #111111; font-size: 50px; text-align: center; font-weight: 900; width: 166px; margin: 0 auto;}
+.brands h2 .brd-underline{height: 2px; width: 70px; background-color: #ed6d00;}
+.brands .brands-wrap {width: 1640px; margin: 0 auto;}
+.brands .brands-wrapbox {display: flex; margin-top: 50px; justify-content: flex-start;}
+.brands .brands-wrapbox .brands-box{width: 500px; height: 680px; position: relative; margin-right: 50px;} 
+.brands .brands-wrapbox .brands-box:last-child {margin-right: 0;}
+.brands .brands-wrapbox .brands-box img{height: 680px; width: 500px; z-index: 100; position: relative;}
+.brands .brands-wrapbox .brands-box .brands-line{width: 430px; text-align: center; height: 2px; background-color: #fff; position: absolute; left: 50px; bottom: 134px; z-index: 180;}
+.brands .brands-wrapbox .brands-box h3{position: absolute; left: 50px; bottom: 26px; z-index: 200; color: #fff; font-size: 50px;}
+.brands .brands-wrapbox .brands-box .brands-btn{position: absolute; z-index: 180; right: 35px; bottom: 31px;}
+.brands .brands-wrapbox .brands-box .brands-btn img{width: 60px; height: 60px;}
+.brands .brands-wrapbox .brands-box .brands-background{position: absolute; left: 0; top: 0; width: 500px; height: 680px; background: rgba(0,0,0,0.2); z-index: 150;}
+
+/*recruit*/
+.recruit {margin-top: 222px;}
+.recruit h2{color: #111111; font-size: 50px; text-align: center; position: relative; font-weight: 900; }
+.recruit h2 .rec-underline{height: 2px; width: 90px; background-color: #ed6d00; position: absolute; left: 733px; top: 72px;}
+
+.recruit .recruit-wrapbox {display: flex;}
+.recruit .recruit-box{width: 513px; height: 510px; background: #999; position: relative; margin-top: 55px; margin-right: 51px;}
+.recruit .recruit-box:last-child {margin-right: 0;}
+.recruit .recruit-box h3{position: absolute; left: 60px; top: 127px; font-size: 30px; font-weight: 700; color: #fff; z-index: 100;}
+.recruit .recruit-box h4{position: absolute; left: 60px; top: 181px; font-size: 30px; font-weight: 700; color: #fff; z-index: 100;}
+.recruit .recruit-box p{position: absolute; left: 60px; top:285px; color: #fff; font-size: 20px; width: 245px; z-index: 100;}
+.recruit .recruit-box:nth-child(2) p {width: 300px;}
+.recruit .recruit-box:nth-child(3) p {width: 230px;}
+.recruit .recruit-box img{width: 100%; border-radius: 5px;}
+.recruit .recruit-box .recruit-background{position: absolute; left: 0; top: 0; width: 513px; height: 510px; background: rgba(0,0,0,0.2); border-radius: 5px; z-index: 80;}
+.recruit .recruit-box .recruit-hover1{position: absolute; z-index: 100; width: 55px; height: 60px; border: 4px solid #fff; left:60px; bottom: 77px; cursor: pointer;}
+.recruit .recruit-box .recruit-hover1 p {position: absolute; left: 40px; top: 10px; display: none; }
+.recruit .recruit-box .recruit-hover2{position: absolute; z-index: 100; width: 55px; height: 60px; border: 4px solid #fff; left:60px; bottom: 77px; cursor: pointer;}
+.recruit .recruit-box .recruit-hover2 p {position: absolute; left: 40px; top: 10px; display: none; }
+.recruit .recruit-box .recruit-hover3{position: absolute; z-index: 100; width: 55px; height: 60px; border: 4px solid #fff; left:60px; bottom: 77px; cursor: pointer;}
+.recruit .recruit-box .recruit-hover3 p {position: absolute; left: 40px; top: 10px; display: none; }
+/*
+.recruit .recruit-box .recruit-hover:hover {width: 180px; height: 60px;}
+.recruit .recruit-box .recruit-hover:hover p{display: block;}
+*/
+
+/*footer*/
+#footer {width: 100%; /*height: 450px;*/ background: #262626; color: #fff; margin-top: 110px; padding-bottom: 90px;}
+#footer .foot-list ul{padding-top: 90px;}
+#footer .foot-list ul li{float: left; margin-right: 75px; font-size: 20px; font-weight: 700;}
+#footer .foot-list ul li:last-child {margin-right: 0;}
+#footer .foot-list .footer-logo{display: flex; align-items: center;}
+#footer .foot-list .footer-logo a img{margin-top: 85px;}
+#footer .foot-list .footer-logo .foot-line {height: 1px; background: #fff; width: 100%; margin-top: 85px;}
+#footer .foot-list .footer-text {margin-top: 40px;}
+#footer .foot-list .footer-text p {color: #C3C3C3;}
